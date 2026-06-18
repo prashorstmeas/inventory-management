@@ -73,13 +73,13 @@ class TestDemandEndpoints:
         # Check for the new items we added
         skus = [item["item_sku"] for item in data]
 
-        # Should have Temperature Sensor Module and Logic Controller Board
-        assert "SNR-420" in skus, "Missing Temperature Sensor Module"
-        assert "CTL-330" in skus, "Missing Logic Controller Board"
+        # Should have Gyroscope Module and H-Bridge Motor Driver
+        assert "GYR-207" in skus, "Missing Gyroscope Module"
+        assert "DRV-405" in skus, "Missing H-Bridge Motor Driver"
 
         # Verify they are marked as stable
         for item in data:
-            if item["item_sku"] in ["SNR-420", "CTL-330"]:
+            if item["item_sku"] in ["GYR-207", "DRV-405"]:
                 assert item["trend"].lower() == "stable", \
                     f"New item {item['item_name']} should have stable trend"
 
