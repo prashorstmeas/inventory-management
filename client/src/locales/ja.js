@@ -6,6 +6,7 @@ export default {
     orders: '注文',
     finance: '財務',
     demandForecast: '需要予測',
+    restocking: '補充',
     companyName: '触媒コンポーネンツ',
     subtitle: '在庫管理システム'
   },
@@ -106,12 +107,14 @@ export default {
     title: '注文',
     description: '顧客注文の表示と管理',
     allOrders: 'すべての注文',
+    submittedOrders: '提出された注文',
     totalOrders: '総注文数',
     totalRevenue: '総収益',
     avgOrderValue: '平均注文額',
     onTimeDelivery: '定時配達',
     itemsCount: '{count}件',
     quantity: '数量',
+    daysCount: '{count}日',
     table: {
       orderNumber: '注文番号',
       orderId: '注文ID',
@@ -125,7 +128,8 @@ export default {
       totalValue: '合計金額',
       status: 'ステータス',
       expectedDelivery: '予定配達日',
-      actualDelivery: '実際の配達日'
+      actualDelivery: '実際の配達日',
+      leadTime: 'リードタイム'
     }
   },
 
@@ -185,6 +189,32 @@ export default {
       change: '変化',
       trend: 'トレンド',
       period: '期間'
+    }
+  },
+
+  // Restocking
+  restocking: {
+    title: '補充',
+    description: '予算を設定し、需要予測に基づく推奨補充品目を確認してください',
+    budget: '予算',
+    recommendedItems: '推奨品目',
+    noRecommendations: 'この予算内で補充条件を満たす品目は現在ありません',
+    totalCost: '合計コスト',
+    remainingBudget: '残り予算',
+    itemsRecommended: '推奨品目数',
+    placeOrder: '注文する',
+    placingOrder: '注文中...',
+    orderSuccess: '補充注文 {orderNumber} が正常に送信されました',
+    orderError: '注文の送信に失敗しました',
+    table: {
+      sku: 'SKU',
+      itemName: '品目名',
+      trend: 'トレンド',
+      currentDemand: '現在の需要',
+      forecastedDemand: '予測需要',
+      restockQty: '補充数量',
+      unitCost: '単価',
+      itemCost: '品目コスト'
     }
   },
 
@@ -377,6 +407,7 @@ export default {
     'Advanced Components Inc': 'アドバンストコンポーネンツ',
     'Premier Industries': 'プレミア工業',
     'Stellar Components Ltd': 'ステラコンポーネンツ',
-    'Dynamic Systems Ltd': 'ダイナミックシステムズ'
+    'Dynamic Systems Ltd': 'ダイナミックシステムズ',
+    'Internal Restocking': '社内補充'
   }
 }
